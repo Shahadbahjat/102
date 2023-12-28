@@ -1,0 +1,27 @@
+<?php
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION['firstName'] = $_POST['firstName'];
+    $_SESSION['lastName'] = $_POST['lastName'];
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Display</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Page 2: Information Display</h2>
+        <p>First Name: <?php echo $_SESSION['firstName']; ?></p>
+        <p>Last Name: <?php echo $_SESSION['lastName']; ?></p>
+        <a href="test_names.php" class="btn btn-primary">Take Quick Test</a>
+    </div>
+</body>
+</html>
