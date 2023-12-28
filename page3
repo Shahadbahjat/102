@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Test</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Page 3: Quick Test</h2>
+        <script>
+            // JavaScript code for quick test
+            var firstName = "<?php echo $_SESSION['firstName']; ?>";
+            var lastName = "<?php echo $_SESSION['lastName']; ?>";
+
+            // Example test (you can modify this based on your criteria)
+            if (firstName.toLowerCase() === "john" && lastName.toLowerCase() === "doe") {
+                alert("You passed the test!");
+            } else {
+                alert("Sorry, you did not pass the test.");
+            }
+        </script>
+    </div>
+</body>
+</html>
